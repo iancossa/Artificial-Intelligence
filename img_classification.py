@@ -35,3 +35,12 @@ rf=RandomForestClassifier(n_estimators=100)
 rf.fit(y_train,z_train)
 pred=rf.predict(y_test)
 print(pred)
+
+#check accuracy
+s=z_test.values
+count=0
+for i in range(len(pred)):
+    if pred[i]==s[i]:
+        count+=1
+print(count)
+print(len(pred))
